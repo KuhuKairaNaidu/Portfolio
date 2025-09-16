@@ -20,7 +20,7 @@ const Home = () => {
               transition={{ delay: 0.2, duration: 0.6 }}
             >
               <h1 className="text-4xl sm:text-5xl font-display font-bold text-gray-800 mb-4">
-                Hello, I'm <span className="text-accent-700">Kaira</span>
+                Hello, I'm <span className="text-accent-700">Kuhu Kaira Naidu</span>
               </h1>
               <h2 className="text-xl sm:text-2xl text-gray-600 mb-6">
                 Researcher 
