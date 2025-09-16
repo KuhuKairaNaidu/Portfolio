@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Caveat:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-pastel-lavender/20 text-gray-800 font-sans;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .page-container {
+    @apply max-w-5xl mx-auto px-4 sm:px-6 py-12;
+  }
+  
+  .nav-link {
+    @apply relative px-3 py-2 text-gray-700 hover:text-accent-700 transition-colors duration-300;
+  }
+  
+  .nav-link.active {
+    @apply text-accent-700 font-medium;
+  }
+  
+  .nav-link.active::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-0.5 bg-accent-500 rounded;
+  }
+  
+  .btn {
+    @apply px-6 py-2 rounded-md transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply btn bg-primary-500 hover:bg-primary-600 text-white focus:ring-primary-500;
+  }
+  
+  .btn-accent {
+    @apply btn bg-accent-500 hover:bg-accent-600 text-white focus:ring-accent-500;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6 transition-all duration-300 hover:shadow-lg;
+  }
+  
+  .postcard {
+    @apply bg-white border-2 border-gray-200 rounded-lg shadow-lg p-8 relative overflow-hidden;
+    aspect-ratio: 3/2;
+    max-width: 600px;
+  }
+  
+  .postcard::before {
+    content: '';
+    @apply absolute top-4 right-4 w-16 h-20 border-2 border-primary-400 bg-pastel-lavender rounded-sm;
+    z-index: 1;
+  }
+  
+  .postcard::after {
+    content: '🌸';
+    white-space: pre;
+    @apply absolute top-8 right-8 text-2xl;
+    z-index: 2;
+  }
+  
+  .input {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+  }
+}
